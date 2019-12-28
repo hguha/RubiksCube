@@ -1,0 +1,111 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+div {
+  position: absolute;
+  transform-style: inherit;
+}
+
+.scene {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.pivot {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* ANCHORS */
+.anchor {
+  width: 2em;
+  height: 6em;
+}
+
+#anchor0 {transform: translateZ(3px) translateY(-33.33%) rotate(0deg) translateY(66.67%);}
+#anchor1 {transform: translateZ(3px) translateY(-33.33%) rotate(-90deg) translateY(66.67%);}
+#anchor2 {transform: translateZ(3px) translateY(-33.33%) rotate(-180deg) translateY(66.67%);}
+#anchor3 {transform: translateZ(3px) translateY(-33.33%) rotate(-270deg) translateY(66.67%);}
+#anchor4 {transform: translateZ(3px) translateY(-33.33%) rotate(-270deg) translateY(66.67%);}
+#anchor5 {transform: translateZ(3px) translateY(-33.33%) rotate(-270deg) translateY(66.67%);}
+
+
+.cube {
+  font-size: 40px;
+  margin-left: -1em;
+  margin-top: -1em;
+}
+
+.piece {
+  width: 1.9em;
+  height: 1.9em;
+}
+
+/* SIDES */
+.side {
+  width: 100%;
+  height: 100%;
+  background: #0A0A0A;
+  border: 0.05em solid #0A0A0A;
+}
+
+.left {
+  transform: rotateY(-90deg) rotateZ(180deg) translateZ(1em);
+}
+.right {
+  transform: rotateY(90deg) rotateZ(90deg) translateZ(1em);
+}
+.back {
+  transform: rotateY(180deg) rotateZ(-90deg) translateZ(1em);
+}
+.front {
+  transform: rotateY(0deg) translateZ(1em);
+}
+.bottom {
+  transform: rotateX(-90deg) rotateZ(-90deg) translateZ(1em);
+}
+.top {
+  transform: rotateX(90deg) rotateZ(180deg) translateZ(1em);
+}
+
+/* STICKER COLORS */
+.sticker {
+  width: 100%;
+  height: 100%;
+}
+
+.blue {background-color: #03a5fc;}
+.green {background-color: #008f39;}
+.white {background-color: #fff;}
+.yellow {background-color: #fcf33d;}
+.orange {background-color: #ff9a36;}
+.red {background-color: #ff0000;}
+
+button, input {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input {
+    display: inline;
+}
+
+button:hover {
+    background: black;
+    color: white;
+}
